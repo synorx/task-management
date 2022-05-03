@@ -1,14 +1,19 @@
 import React from 'react'
 import Task from './Task'
 
-const TaskList = () => {
+const TaskList = ({filteredResult, handleCheck, handleDelete}) => {
+  
   return (
-    <div>TaskList
-      <ul>
-        <Task />
-      </ul>
-    </div>
-
+    <ul>
+        {filteredResult.map((item) => (
+            <Task 
+                key={item.id}
+                item={item}
+                handleCheck={handleCheck}
+                handleDelete={handleDelete}
+            />
+        ))}
+    </ul>
   )
 }
 
