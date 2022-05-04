@@ -10,7 +10,7 @@ const Task = ({ item, handleCheck, handleDelete }) => {
             checked={item.checked}
         />
         <label
-            style={(item.checked) ? {color: 'green'} : null }
+            style={(item.checked) ? {color: 'rgb(10, 243, 10)'} : null }
             onDoubleClick={() => handleCheck(item.id)}
         >{item.item}</label>
         <FaTrashAlt
